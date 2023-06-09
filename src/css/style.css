@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0px;
+    background-image: url(../img/stacked-peaks-haikei.svg);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+
+.contenedor {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.titulo h1 {
+    margin: 0px;
+    font-size: 3em;
+}
+
+.subtitulo {
+    width: 500px;
+}
+
+.subtitulo h5 {
+    font-size: .9em;
+}
+
+.titulo {
+    margin-top: 50px;
+    width: auto;
+    color: aliceblue;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.titulo img {
+    width: 300px;
+}
+
+.input-codigo {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.input-codigo input {
+    width: 600px;
+    height: 45px;
+    outline: none;
+    font-size: 1.2em;
+    padding-left: 10px;
+}
+
+.input-codigo input[type="submit"] {
+    width: 200px;
+    height: 45px;
+    border: 2.5px solid rgb(19, 227, 19);
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 14px;
+}
+
+.input-codigo input[type="submit"]:hover {
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    background-color: rgb(19, 227, 19);
+    color: aliceblue;
+    border: none;
+    transform: scale(.9);
+
+}
+
+.img-firma {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.img-firma p {
+    margin-top: 0px;
+}
+
+.alerta {
+    transition: transform 4.5s ease-in-out;
+    transform: translateX(0%);
+    background-color: rgb(219, 88, 88);
+    color: aliceblue;
+    font-size: 18px;
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 6px;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: -2px 2px 10px rgb(80, 79, 79);
+}
+
+.is-active {
+    transition: transform 1.2s ease-in-out;
+    transform: translateX(-10000%);
+}
+
+::placeholder {
+    padding-left: 10px;
+    font-size: 1.1em;
+}
+
+.img-firma hr {
+    width: 250px;
+    border: 2px solid black;
+}
+
+@media screen and (max-width:500px) {
+    .titulo {
+        width: auto;
+    }
+
+    .titulo h1 {
+        padding: 0px 20px 0px 20px;
+        font-size: 2.3em;
+    }
+
+    .subtitulo {
+        width: 430px;
+    }
+
+    .subtitulo h5 {
+        font-size: 1.2em;
+    }
+
+    .titulo img {
+        width: 210px;
+    }
+
+    .input-codigo input {
+        width: 290px;
+        font-size: 14px;
+    }
+
+    .input-codigo input[type='submit'] {
+        width: 100px;
+    }
+    
+}
+
+.icon-help {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.contenedor-datos {
+    transition: transform .2s ease-in-out;
+    transform: translateY(-1000%);
+    width: 300px;
+    height: auto;
+    position: absolute;
+    z-index: 990;
+    right: 10px;
+    top: 10px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    box-shadow: -2px 2px 10px rgb(80, 79, 79);
+}
+
+.icon-close * {
+    float: right;
+    padding-top: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+
+}
+
+.text-contenedor {
+    padding: 10px;
+}
+
+.active-datos {
+    transition: transform 1s ease-in-out;
+    transform: translateY(0px);
+}
